@@ -11,12 +11,12 @@ public class BaseDao {
 	private PreparedStatement pstmt;
 	private ResultSet rs;
 	
-	//1.»ñµÃÁ¬½ÓµÄ·½·¨£º
+	//1.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÓµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½
 	public void getConn(){
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
-			//2.´´½¨Á¬½Ó¶ÔÏó
-			conn=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/myschool","root","mysql");
+			//2.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¶ï¿½ï¿½ï¿½
+			conn=DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/sun","root","mysql");
 		} catch (ClassNotFoundException e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
@@ -26,7 +26,7 @@ public class BaseDao {
 		}
 		
 	}
-	//2.¹Ø±ÕËùÓÐ¶ÔÏóµÄ·½·¨£º
+	//2.ï¿½Ø±ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½ï¿½ï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½
 	public void closeAll(){
 		try {
 			if(rs!=null)
@@ -50,7 +50,7 @@ public class BaseDao {
 			e.printStackTrace();
 		}
 	}
-	//3.Ôö¡¢É¾¡¢¸ÄµÄ·½·¨£º
+	//3.ï¿½ï¿½ï¿½ï¿½É¾ï¿½ï¿½ï¿½ÄµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½
 	public int executeSql(String sql,Object... obj){
 		getConn();
 		int count=0;
